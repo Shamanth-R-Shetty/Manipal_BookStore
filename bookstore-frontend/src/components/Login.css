@@ -1,0 +1,90 @@
+
+
+/* Full-page wrapper for positioning */
+.login-page {
+  position: relative;
+  height: 100vh;
+  width: 100vw;
+}
+
+/* Background Image Covering Full Screen */
+.login-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  overflow: hidden;
+}
+
+.login-background img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: blur(5px);
+}
+
+/* Login Content Styling */
+.login-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 3rem;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+}
+
+.login-title {
+  font-size: 2.5rem;
+  color: #6c63ff;
+  margin-bottom: 2rem;
+}
+
+.login-card-container {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  max-width: 600px;
+}
+
+.login-card {
+  background: white;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  cursor: pointer;
+  transition: transform 0.2s;
+  width: 180px;
+}
+
+.login-card:hover {
+  transform: translateY(-5px);
+}
+
+.login-icon {
+  width: 80px;
+  height: 80px;
+  margin-bottom: 1rem;
+}
+
+.login-form {
+  margin-top: 2rem;
+  width: 100%;
+  max-width: 400px;
+}
+
+.btn-dark {
+  background: #6c63ff;
+  color: white;
+  padding: 0.8rem 1.2rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.btn-dark:hover {
+  background: #5548c8;
+}

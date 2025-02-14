@@ -1,0 +1,28 @@
+.container {
+    max-width: 90%;
+  }
+  
+  .nav-pills .nav-link {
+    background-color: #6c63ff;
+    color: white;
+    border-radius: 8px;
+    margin: 0.5rem;
+  }
+  
+  .nav-pills .nav-link.active {
+    background-color: #5548c8;
+  }
+  
+  .card {
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+    padding: 1.5rem;
+    margin-top: 2rem;
+    transition: transform 0.2s;
+  }
+  
+  .card:hover {
+    transform: translateY(-5px);
+  }
+  
