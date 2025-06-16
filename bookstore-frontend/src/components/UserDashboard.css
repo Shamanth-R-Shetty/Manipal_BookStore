@@ -1,36 +1,40 @@
 /* Importing stylish font from Google Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
 
+/* Base dark background and light text */
 body {
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
+  background-color: #121212;
+  color: #e0e0e0;
+  margin: 0;
 }
 
-/* Container styling with a subtle shadow and rounded corners */
+/* Container styling with subtle shadow and dark card */
 .bookstore-container {
   max-width: 1400px;
   margin: 0 auto;
   padding: 20px;
-  background-color: #ffffff;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-  border-radius: 8px;
+  background-color: #1e1e2f;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.7);
+  border-radius: 12px;
 }
 
-/* Header Styling with a Gradient Background */
+/* Header Styling with a Dark Purple-Blue Gradient */
 .bookstore-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin-bottom: 20px;
   padding: 15px 20px;
-  border-radius: 8px;
-  background: linear-gradient(90deg, #fbc2eb, #a6c1ee);
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+  background: linear-gradient(90deg, #4b0082, #2e0249);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.8);
 }
 
 .bookstore-title {
   font-size: 2rem;
   font-weight: 600;
-  color: #fff;
+  color: #ffffff;
   margin: 0;
 }
 
@@ -40,37 +44,69 @@ body {
   align-items: center;
 }
 
-/* Search input styling: widened to 350px */
+/* Search input styling with dark background */
 .bookstore-search {
   width: 350px;
   padding: 8px 12px;
-  border-radius: 4px;
-  border: 1px solid #ccc;
+  border-radius: 6px;
+  border: 1px solid #444;
+  background-color: #2a2a3d;
+  color: #e0e0e0;
 }
 
-/* Buttons: making search and cart buttons identical in style */
+.bookstore-search::placeholder {
+  color: #888;
+}
+
+/* Buttons: purple-blue theme */
 .search-button,
-.cart-button {
-  padding: 8px 16px;
-  border-radius: 4px;
+.cart-button,
+button,
+.genre-button,
+.remove-button {
+  min-width: 120px;
+  height: 40px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 16px;
+  border-radius: 6px;
   font-weight: 500;
+  background: linear-gradient(45deg, #6a0dad, #1e90ff);
+  border: none;
+  color: #fff;
+  transition: transform 0.2s, box-shadow 0.2s;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
-/* Override Bootstrap primary button to fit our theme */
-.btn-primary {
-  background-color: #a6c1ee;
-  border-color: #a6c1ee;
+/* Specific styling for remove button gradient */
+.remove-button {
+  background: linear-gradient(45deg, #ff4081, #651fff);
 }
 
-.btn-primary:hover {
-  background-color: #8aaadf;
-  border-color: #8aaadf;
+button:hover,
+.remove-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(30, 144, 255, 0.6);
 }
 
-/* Genre Button */
+button:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(106, 13, 173, 0.5);
+}
+
+/* Genre Button Hover */
 .genre-button {
-  border-radius: 4px;
-  font-weight: 500;
+  background: #2a2a3d;
+  color: #e0e0e0;
+  border: 1px solid #444;
+  transition: background 0.2s;
+}
+
+.genre-button:hover {
+  background: #3b3b58;
 }
 
 /* Book Cards Styling */
@@ -78,33 +114,32 @@ body {
   cursor: pointer;
   border: none;
   transition: box-shadow 0.3s ease, transform 0.3s ease;
-  border-radius: 8px;
-  background-color: #fff;
+  border-radius: 12px;
+  background-color: #2a2a3d;
+  color: #e0e0e0;
 }
 
 .book-card:hover {
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 8px 16px rgba(30, 144, 255, 0.6);
   transform: translateY(-4px);
 }
 
 /* Book Image */
-.book-image {
+.book-image,
+.book-image-placeholder {
   height: 250px;
   object-fit: cover;
-  border-top-left-radius: 8px;
-  border-top-right-radius: 8px;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
 }
 
 .book-image-placeholder {
-  height: 250px;
-  background-color: #ddd;
+  background-color: #444;
   display: flex;
   align-items: center;
   justify-content: center;
   font-size: 1.1rem;
-  color: #666;
-  border-top-left-radius: 8px;
-  border-top-right-radius: 8px;
+  color: #888;
 }
 
 /* Genre Sidebar Styling */
@@ -112,17 +147,18 @@ body {
   position: fixed;
   left: 20px;
   top: 100px;
-  width: 200px;
-  background-color: #fff;
-  border: 1px solid #ddd;
-  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
+  width: 220px;
+  background-color: #1e1e2f;
+  border: 1px solid #444;
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
   z-index: 10;
   padding: 20px;
-  border-radius: 8px;
+  border-radius: 12px;
 }
 
 .genre-sidebar h4 {
   margin-top: 0;
+  color: #bb86fc;
 }
 
 .genre-sidebar ul {
@@ -134,44 +170,55 @@ body {
 .genre-sidebar li {
   padding: 8px 0;
   cursor: pointer;
-  color: #6a1b9a;
+  color: #e0e0e0;
   transition: color 0.2s;
 }
 
 .genre-sidebar li:hover {
-  color: #4a148c;
+  color: #bb86fc;
   text-decoration: underline;
 }
 
 /* Cart View Adjustments */
 .list-group-item {
   border: none;
-  border-bottom: 1px solid #f0f0f0;
+  border-bottom: 1px solid #333;
+  background-color: #2a2a3d;
+  color: #e0e0e0;
 }
 
 .list-group-item:last-child {
   border-bottom: none;
 }
 
-/* Modal Styling: smaller modal to prevent scrolling */
+/* Modal Styling: dark modal */
+.modal-content {
+  background-color: #1e1e2f;
+  border-radius: 12px;
+  color: #e0e0e0;
+}
+
+.modal-header,
+.modal-footer {
+  border-color: #444;
+}
+
 .custom-modal .modal-dialog {
   max-width: 600px;
   margin: 1.75rem auto;
 }
 
-.custom-modal .modal-content {
-  border-radius: 8px;
-}
-
-/* General Button Styling */
-button {
-  cursor: pointer;
-}
-
-button:focus {
-  outline: none;
-}
-
-button:hover {
-  opacity: 0.9;
+/* Chatbot Container */
+.chatbot-container {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 300px;
+  height: 400px;
+  background-color: #1e1e2f;
+  border: 1px solid #444;
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  border-radius: 12px;
 }

@@ -84,23 +84,23 @@ const Login = () => {
         <div className="login-card-container">
           <div className="login-card" onClick={() => setRole("admin")}>
             <img
-              src="https://png.pngtree.com/png-vector/20230407/ourmid/pngtree-administrator-line-icon-vector-png-image_6688954.png"
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTOJMs_aoeJy8uwPOUHWPRc8vV7k5NKprBdUQ&s"
               alt="Admin Icon"
               className="login-icon"
             />
             <h3>Admin Login</h3>
           </div>
-          <div className="login-card" onClick={() => setRole("author")}>
+          {/* <div className="login-card" onClick={() => setRole("author")}>
             <img
               src="https://png.pngtree.com/png-vector/20230407/ourmid/pngtree-writer-line-icon-vector-png-image_6688962.png"
               alt="Author Icon"
               className="login-icon"
             />
             <h3>Author Login</h3>
-          </div>
+          </div> */}
           <div className="login-card" onClick={() => setRole("user")}>
             <img
-              src="https://static.thenounproject.com/png/199747-200.png"
+              src="https://cdn-icons-gif.flaticon.com/11255/11255995.gif"
               alt="User Icon"
               className="login-icon"
             />
@@ -150,9 +150,9 @@ const Login = () => {
       {!role && (
         <div className="login-gif" style={{ textAlign: "center", marginTop: "20px" }}>
           <img
-            src="https://mcmscache.epapr.in/post_images/website_132/new_post_images/5fbb8edc8f352_UD-50yrs-logo-web.png" // or "/assets/my-gif.gif" if stored in a subfolder
+            src="https://zerodha.com/z-connect/wp-content/uploads/2014/02/Udayavani.gif" // or "/assets/my-gif.gif" if stored in a subfolder
             alt="Decorative GIF"
-            style={{ width: "200px", height: "auto" }}
+            style={{ width: "300px", height: "auto" }}
           />
         </div>
       )}

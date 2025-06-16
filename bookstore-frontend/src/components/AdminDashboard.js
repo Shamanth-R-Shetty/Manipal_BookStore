@@ -17,14 +17,14 @@ const AdminDashboard = () => {
         <button className="dashboard-btn" onClick={() => setView("users")}>
           Manage Users
         </button>
-        <button className="dashboard-btn" onClick={() => setView("authors")}>
+        {/* <button className="dashboard-btn" onClick={() => setView("authors")}>
           Manage Authors
-        </button>
+        </button> */}
       </div>
       <div className="dashboard-content">
         {view === "books" && <ManageBooks />}
         {view === "users" && <ManageUsers />}
-        {view === "authors" && <ManageAuthors />}
+        {/* {view === "authors" && <ManageAuthors />} */}
       </div>
     </div>
   );
